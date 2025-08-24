@@ -1,7 +1,0 @@
-setup.py
-qzbot/__init__.py
-qzbot/core.py
-qzbot.egg-info/PKG-INFO
-qzbot.egg-info/SOURCES.txt
-qzbot.egg-info/dependency_links.txt
-qzbot.egg-info/top_level.txt
