@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qzbot"
+version = "0.13"
+authors = [
+    {name = "nm123"}
+]
+description = "No"
+requires-python = ">=3.6"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["qzbot*"]
+exclude = ["tests*"]
