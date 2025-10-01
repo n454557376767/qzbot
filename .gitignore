@@ -8,3 +8,6 @@ build/
 dist/
 *.egg-info/
 .eggs/
+
+# 个人备份目录
+src_bak/
