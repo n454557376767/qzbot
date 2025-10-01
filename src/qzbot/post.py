@@ -58,3 +58,21 @@ class Post:
             return response.json()
         except requests.RequestException as e:
             return f"请求出错: {str(e)}"
+            
+    def reply_to_message(self, content, category_id, referenced_message_id):
+        if not config.token:
+            return "请先在config模块中设置token"
+            
+        url = f"{self.base_url}/post_referenced_message"
+        data = {
+            "content": content,
+            "category_id": category_id,
+            "referenced_message_id": referenced_message_id
+        }
+        
+        try:
+            response = requests.post(url, headers=self.headers, data=json.dumps(data))
+            return response.json()
+        except Exception as e:
+            return f"请求出错: {str(e)}"
+    
