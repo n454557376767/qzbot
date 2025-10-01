@@ -1,0 +1,10 @@
+# Python 编译产物
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 项目打包/安装产物
+build/
+dist/
+*.egg-info/
+.eggs/
