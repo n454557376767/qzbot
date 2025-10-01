@@ -11,3 +11,6 @@ dist/
 
 # 个人备份目录
 src_bak/
+
+# 项目测试
+tests/
