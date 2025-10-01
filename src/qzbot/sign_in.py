@@ -24,4 +24,4 @@ def sign_in():
         return response.status_code, response.json()
     except Exception as e:
         
-        return None, f"请求出错：{str(e)}"
+        return f"请求出错：{str(e)}"
