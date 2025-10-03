@@ -18,7 +18,7 @@ class Post:
 
     def send_post(self, title, content, category_id, message_type=None, is_markdown=None):
         if not config.token:
-            return "请先在config模块中设置token"
+            return "请先使用set_token函数设置token"
         
         url = f"{self.base_url}/post_message"
         data = {
@@ -30,7 +30,8 @@ class Post:
             data["is_markdown"] = is_markdown
         if message_type:
             data["message_type"] = message_type
-            
+        if title:
+            data["title"] = title    
         try:
             response = requests.post(url, headers=self.headers, data=json.dumps(data))
             return response.json()
@@ -39,7 +40,7 @@ class Post:
 
     def like_message(self, message_id):
         if not config.token:
-            return "请先在config模块中设置token"
+            return "请先使用set_token函数设置token"
             
         url = f"{self.base_url}/like_message"
         data = {"message_id": message_id}
@@ -61,7 +62,7 @@ class Post:
             
     def reply_to_message(self, content, category_id, referenced_message_id):
         if not config.token:
-            return "请先在config模块中设置token"
+            return "请先使用set_token函数设置token"
             
         url = f"{self.base_url}/post_referenced_message"
         data = {
